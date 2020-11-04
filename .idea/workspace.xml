@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c5896b-4946-474e-9743-3ff240178c3a" name="Default Changelist" comment="GD Vue Basic" />
+    <list default="true" id="783b12e0-3488-4a59-a12f-2c3d18c9c2eb" name="Default Changelist" comment="UGD Vue Basic">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ja8UlcPvQGqFwFi2Zxnle39b48" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1joGjbVCrHta7Q55E9tZIUpGhmf" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,25 +46,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0c5896b-4946-474e-9743-3ff240178c3a" name="Default Changelist" comment="" />
-      <created>1604030862575</created>
+      <changelist id="783b12e0-3488-4a59-a12f-2c3d18c9c2eb" name="Default Changelist" comment="" />
+      <created>1604463167393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604030862575</updated>
-      <workItem from="1604030863821" duration="1261000" />
+      <updated>1604463167393</updated>
+      <workItem from="1604463169582" duration="3520000" />
     </task>
-    <task id="LOCAL-00001" summary="GD Vue Basic">
-      <created>1604031088048</created>
+    <task id="LOCAL-00001" summary="UGD Vue Basic">
+      <created>1604466599213</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1604031088048</updated>
+      <updated>1604466599213</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -48,22 +71,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="GD Vue Basic" />
-    <option name="LAST_COMMIT_MESSAGE" value="GD Vue Basic" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="421" y="87" key="FileChooserDialogImpl" timestamp="1604030939148">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="421" y="87" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1604030939148" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1604031107137">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1604031107137" />
-    <state x="443" y="252" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1604030990062">
-      <screen x="0" y="0" width="1280" height="689" />
-    </state>
-    <state x="443" y="252" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.689@0.0.1280.689" timestamp="1604030990062" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UGD Vue Basic" />
+    <option name="LAST_COMMIT_MESSAGE" value="UGD Vue Basic" />
   </component>
 </project>
