@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="vue.js"></script>
+    <title>UGD_VueJSBasic</title>
+</head>
+
+<body>
+<div id="app" class="card text-center">
+    <div class="card-header">
+        PERMAINAN TEBAK ANGKA
+    </div>
+    <div class="card-body" style="background-color: #FEC3A6">
+        <h1 class="card-title">🎮 Tebak Angka ! 🎲</h1>
+        <p class="card-text">Masukkan angka 1-10</p>
+        <div class=" mx-auto w-50 p-3">
+            <input type="text" class="form-control text-center" v-model="tebakan" :disabled="isDisabled" placeholder="Mau angka berapa?" />
+        </div>
+        <br>
+        <button class="btn btn-info" @click="guess" :disabled="isDisabled">Tebak</button>
+        <br> <br> <b> Kamu punya {{ kesempatan }} kesempatan </b>
+    </div>
+    <div class="card-body card text-center" v-show="menang">
+        <h3> 🎉 SELAMAT, KAMU MENANG ! </h3>
+        <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
+    </div>
+    <div class="card-body card text-center" v-show="salah">
+        <h4> TEBAKKAN KAMU SALAH ! </h4>
+        <button class="btn btn-danger" @click="tryAgain">COBA LAGI</button>
+    </div>
+    <div class="card-body card text-center" v-show="kalah">
+        <h4> KAMU KALAH, MAIN LAGI YA 😜 !</h4>
+        <p>Angka yang benar adalah {{ angka }} </p>
+        <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
+    </div>
+    <div class="card-footer text-muted">
+        {{ `${mhs.nama} | ${mhs.npm} | ${mhs.kelas}` }}
+    </div>
+    <br> <br> <br>
+    <p style="display: none">Jawaban benar : {{ angka }} </p>
+</div>
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            angka: Math.floor(Math.random() * 10) + 1,
+            tebakan: "",
+            kesempatan: 3,
+            menang: undefined,
+            salah: undefined,
+            kalah: undefined,
+            isDisabled: false,
+            mhs: {
+                nama: 'Elizabeth Calista',
+                npm: '180709660',
+                kelas: 'PAW D',
+            },
+        },
+        methods: {
+            guess() {
+                if (this.tebakan >= 1 && this.tebakan <= 10) {
+                    if (this.tebakan == this.angka) {
+                        this.menang = 1;
+                    } else {
+                        this.salah = 1;
+                        this.isDisabled = true;
+                        this.kesempatan--;
+                        if (this.kesempatan == 0) {
+                            this.kalah = 1;
+                            this.salah = undefined;
+                        }
+                    }
+                } else {
+                    alert("Angka yang dimasukkan harus 1 hingga 10.");
+                    location.reload();
+                }
+            },
+            tryAgain() {
+                this.isDisabled = false;
+                this.salah = undefined;
+            },
+            playAgain() {
+                location.reload();
+            }
+        },
+    });
+</script>
+
+</html>
