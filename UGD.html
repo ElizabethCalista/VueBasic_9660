@@ -13,39 +13,39 @@
 </head>
 
 <body>
-<div id="app" class="card text-center">
-    <div class="card-header">
-        PERMAINAN TEBAK ANGKA
-    </div>
-    <div class="card-body" style="background-color: #FEC3A6">
-        <h1 class="card-title">🎮 Tebak Angka ! 🎲</h1>
-        <p class="card-text">Masukkan angka 1-10</p>
-        <div class=" mx-auto w-50 p-3">
-            <input type="text" class="form-control text-center" v-model="tebakan" :disabled="isDisabled" placeholder="Mau angka berapa?" />
+    <div id="app" class="card text-center">
+        <div class="card-header">
+            PERMAINAN TEBAK ANGKA
         </div>
-        <br>
-        <button class="btn btn-info" @click="guess" :disabled="isDisabled">Tebak</button>
-        <br> <br> <b> Kamu punya {{ kesempatan }} kesempatan </b>
+        <div class="card-body" style="background-color: #FEC3A6">
+            <h1 class="card-title">🎮 Tebak Angka ! 🎲</h1>
+            <p class="card-text">Masukkan angka 1-10</p>
+            <div class=" mx-auto w-50 p-3">
+                <input type="text" class="form-control text-center" v-model="tebakan" :disabled="isDisabled" placeholder="Mau angka berapa?" />
+            </div>
+            <br>
+            <button class="btn btn-info" @click="guess" :disabled="isDisabled">Tebak</button>
+            <br> <br> <b> Kamu punya {{ kesempatan }} kesempatan </b>
+        </div>
+        <div class="card-body card text-center" v-show="menang">
+            <h3> 🎉 SELAMAT, KAMU MENANG ! </h3>
+            <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
+        </div>
+        <div class="card-body card text-center" v-show="salah">
+            <h4> TEBAKKAN KAMU SALAH ! </h4>
+            <button class="btn btn-danger" @click="tryAgain">COBA LAGI</button>
+        </div>
+        <div class="card-body card text-center" v-show="kalah">
+            <h4> KAMU KALAH, MAIN LAGI YA 😜 !</h4>
+            <p>Angka yang benar adalah {{ angka }} </p>
+            <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
+        </div>
+        <div class="card-footer text-muted">
+            {{ `${mhs.nama} | ${mhs.npm} | ${mhs.kelas}` }}
+        </div>
+        <br> <br> <br>
+        <p style="display: none">Jawaban benar : {{ angka }} </p>
     </div>
-    <div class="card-body card text-center" v-show="menang">
-        <h3> 🎉 SELAMAT, KAMU MENANG ! </h3>
-        <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
-    </div>
-    <div class="card-body card text-center" v-show="salah">
-        <h4> TEBAKKAN KAMU SALAH ! </h4>
-        <button class="btn btn-danger" @click="tryAgain">COBA LAGI</button>
-    </div>
-    <div class="card-body card text-center" v-show="kalah">
-        <h4> KAMU KALAH, MAIN LAGI YA 😜 !</h4>
-        <p>Angka yang benar adalah {{ angka }} </p>
-        <button class="btn btn-primary" @click="playAgain">MAIN LAGI</button>
-    </div>
-    <div class="card-footer text-muted">
-        {{ `${mhs.nama} | ${mhs.npm} | ${mhs.kelas}` }}
-    </div>
-    <br> <br> <br>
-    <p style="display: none">Jawaban benar : {{ angka }} </p>
-</div>
 </body>
 
 <script>
@@ -89,7 +89,7 @@
                 this.salah = undefined;
             },
             playAgain() {
-                location.reload();
+                location.reload(); //harusnya buat fungsi random angka biar ga usah refresh2 reload page
             }
         },
     });
